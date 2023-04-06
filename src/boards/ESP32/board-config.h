@@ -64,7 +64,7 @@ extern "C" {
 #define RADIO_DIO_2 GPIO_NUM_12
 #define RADIO_DIO_3 GPIO_NUM_17
 
-#define LED_1 GPIO_NUM_19
+#define LED_1 NC
 
 #define UART_TX GPIO_NUM_4
 #define UART_RX GPIO_NUM_5
@@ -79,4 +79,4 @@ extern "C" {
 }
 #endif
 
-#endif // __BOARD_CONFIG_H__
+#endif   // __BOARD_CONFIG_H__

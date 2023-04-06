@@ -1,5 +1,6 @@
 #include "gpio-board.h"
 #include "driver/gpio.h"
+#include <stdio.h>
 
 void GpioMcuInit(
     Gpio_t    *obj,
@@ -92,7 +93,8 @@ void GpioMcuWrite(Gpio_t *obj, uint32_t value)
     if (obj == NULL) {
         // assert_param( LMN_STATUS_ERROR );
         while (1)
-            ;
+            printf("Error on GpioMcuWrite!\n");
+        ;
     }
     // Check if pin is not connected
     if (obj->pin == NC) {
