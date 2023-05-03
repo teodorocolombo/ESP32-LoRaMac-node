@@ -68,8 +68,8 @@ extern "C" {
 
 #define UART_TX GPIO_NUM_17
 #define UART_RX GPIO_NUM_16
-#define I2C_SDA GPIO_NUM_16
-#define I2C_SCL GPIO_NUM_17
+#define I2C_SDA NC
+#define I2C_SCL NC
 
 // Debug pins definition.
 #define RADIO_DBG_PIN_TX NC
