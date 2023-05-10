@@ -8,6 +8,7 @@
 #include "test-sx1276.h"
 #include "ping-pong.h"
 
+#include "test-ping.h"
 
 void app_main(void)
 {
@@ -18,7 +19,7 @@ void app_main(void)
    //xTaskCreate(test_spi, "taskss", 3 * 1024, NULL, 3, NULL); 
    //xTaskCreate(test_sx1276, "taskss", 3 * 1024, NULL, 3, NULL); 
 
-   xTaskCreate(start, "taskss", 3 * 1024, NULL, 3, NULL); 
+   xTaskCreate(func, "taskss", 3 * 1024, NULL, 3, NULL); 
 
     vTaskDelay(portMAX_DELAY);
 }

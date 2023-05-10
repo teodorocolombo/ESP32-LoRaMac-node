@@ -340,7 +340,7 @@ void SX1276Init( RadioEvents_t *events )
         SX1276Write( RadioRegsInit[i].Addr, RadioRegsInit[i].Value );
     }
 
-    SX1276SetModem( MODEM_FSK );
+    SX1276SetModem( MODEM_LORA );
 
     SX1276.Settings.State = RF_IDLE;
 }
@@ -847,6 +847,7 @@ void SX1276Send( uint8_t *buffer, uint8_t size )
         break;
     case MODEM_LORA:
         {
+            printf("test\n");
             if( SX1276.Settings.LoRa.IqInverted == true )
             {
                 SX1276Write( REG_LR_INVERTIQ, ( ( SX1276Read( REG_LR_INVERTIQ ) & RFLR_INVERTIQ_TX_MASK & RFLR_INVERTIQ_RX_MASK ) | RFLR_INVERTIQ_RX_OFF | RFLR_INVERTIQ_TX_ON ) );

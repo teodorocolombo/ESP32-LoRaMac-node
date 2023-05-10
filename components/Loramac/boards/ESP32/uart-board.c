@@ -15,7 +15,7 @@ void UartMcuInit(Uart_t *obj, UartId_t uartId, PinNames tx, PinNames rx)
     // UART configuration
     uart_config_t uart_config = {
         .baud_rate  = 115200,
-        .data_bits  = UART_DATA_8_BITS,
+        .data_bits  = UART_DATA_BITS_MAX,
         .parity     = UART_PARITY_DISABLE,
         .stop_bits  = UART_STOP_BITS_1,
         .flow_ctrl  = UART_HW_FLOWCTRL_DISABLE,

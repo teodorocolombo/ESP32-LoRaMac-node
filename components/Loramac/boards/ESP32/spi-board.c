@@ -19,7 +19,7 @@ void SpiInit(
         .sclk_io_num     = sclk,
         .quadwp_io_num   = -1,
         .quadhd_io_num   = -1,
-        .max_transfer_sz = 64};
+        .max_transfer_sz = 0};
 
     spi_device_interface_config_t devcfg = {
         .clock_speed_hz = 1000000,   // Default clock speed: 1MHz

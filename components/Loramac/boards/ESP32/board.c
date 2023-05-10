@@ -73,7 +73,7 @@ void BoardInitMcu(void)
 
     SpiInit(&SX1276.Spi, SPI_2, RADIO_MOSI, RADIO_MISO, RADIO_SCLK, RADIO_NSS);
     SX1276IoInit();
-    I2cInit(&I2c, I2C_1, I2C_SCL, I2C_SDA);
+ //   I2cInit(&I2c, I2C_1, I2C_SCL, I2C_SDA);
 
     McuInitialized = true;
    // SX1276IoDbgInit();
